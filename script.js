@@ -1,8 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const hero = document.querySelector('.hero');
-  hero.style.opacity = 0;
-  setTimeout(() => {
-    hero.style.transition = 'opacity 2s ease';
-    hero.style.opacity = 1;
-  }, 300);
-});
+function filterSelection(category) {
+  let items = document.getElementsByClassName("filter-item");
+  if (category === "all") category = "";
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.display = items[i].className.indexOf(category) > -1 ? "block" : "none";
+  }
+}
+filterSelection("all");
+
+function searchByCode() {
+  let input = document.getElementById("searchBox").value.toLowerCase();
+  let items = document.getElementsByClassName("filter-item");
+  for (let i = 0; i < items.length; i++) {
+    let code = items[i].querySelector("h3").innerText.toLowerCase();
+    items[i].style.display = code.indexOf(input) > -1 ? "block" : "none";
+  }
+}
