@@ -1,101 +1,113 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
-  scroll-behavior: smooth;
-  background: #f0f8ff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #e0f2ff, #ffffff);
   color: #333;
 }
 
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1528715471579-d1b3c2f2c94e?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Header */
+header {
   text-align: center;
-  color: white;
-  position: relative;
+  padding: 40px 20px 20px;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 60, 120, 0.3);
+header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
-
-.hero .content {
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-
-.hero h2 {
-  font-size: 1.8rem;
-  margin: 10px 0;
-  color: #b2e0ff;
-}
-
-.hero p {
+header .tagline {
   font-size: 1rem;
+  opacity: 0.9;
 }
 
-.about, .event, .closing {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.event {
-  background: #e6f4ff;
-}
-
-.event .card {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 400px;
-}
-
-footer {
-  background: #0077cc;
+/* Banner info */
+.info-banner {
+  background: #004f9f;
   color: white;
+  padding: 12px 20px;
   text-align: center;
+  font-weight: 600;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Filter & Search */
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+select, input[type="text"] {
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card iframe {
+  width: 100%;
+  height: 160px;
+  border: none;
+  background: #000;
+}
+
+.card-content {
   padding: 15px;
-}
-.couple {
   text-align: center;
-  padding: 50px 20px;
-  background: #f0f8ff;
+}
+.card-content h3 {
+  margin: 5px 0;
+  font-weight: bold;
 }
 
-.couple-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+/* Button */
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.download-btn:hover {
+  background: #005fc1;
 }
 
-.person img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #b2e0ff;
-}
-
-.person h4 {
-  margin-top: 10px;
-  color: #004d80;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+  background: #f8f9fa;
+  margin-top: 40px;
 }
