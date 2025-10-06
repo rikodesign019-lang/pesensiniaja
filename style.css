@@ -74,3 +74,28 @@ footer {
   text-align: center;
   padding: 15px;
 }
+.couple {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f0f8ff;
+}
+
+.couple-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.person img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #b2e0ff;
+}
+
+.person h4 {
+  margin-top: 10px;
+  color: #004d80;
+}
